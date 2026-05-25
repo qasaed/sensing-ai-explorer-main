@@ -1,12 +1,13 @@
 import axios from "axios";
 
+const DEFAULT_API_BASE_URL = "https://mos-backend-kypz.onrender.com";
 const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
 export function getApiBaseUrl(): string {
   const raw = typeof apiBaseUrl === "string" ? apiBaseUrl.trim() : "";
 
   if (!raw) {
-    return "";
+    return DEFAULT_API_BASE_URL;
   }
 
   return raw.replace(/\/+$/, "");

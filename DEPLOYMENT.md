@@ -5,9 +5,11 @@
 1. Create a Vercel project from this repository.
 2. In Vercel Dashboard > Project > Settings > Environment Variables, add:
    - Name: `VITE_API_BASE_URL`
-   - Value: your Render backend URL, for example `https://your-app-name.onrender.com`
+   - Value: `https://mos-backend-kypz.onrender.com`
    - Environment: Production, Preview, and Development (recommended)
 3. Redeploy the project.
+
+The frontend also falls back to this production URL automatically if the environment variable is not set, which keeps the Render backend working on Vercel builds.
 
 ## Local development
 
@@ -31,10 +33,10 @@ This verifies the production build succeeds with the configured environment vari
 
 ## Render backend URL
 
-Use the public URL of your FastAPI backend on Render, for example:
+Use the public URL of your FastAPI backend on Render:
 
 ```text
-https://your-app-name.onrender.com
+https://mos-backend-kypz.onrender.com
 ```
 
 If your backend is configured with a custom path prefix, include it in the value.
